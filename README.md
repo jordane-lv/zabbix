@@ -16,7 +16,7 @@ sudo su
 
 
 
-1. Execute o comando abaixo para efetuar a instalação:
+2. Execute o comando abaixo para efetuar a instalação:
 
 ```bash
 wget https://raw.githubusercontent.com/jordane-lv/zabbix/main/install.sh && chmod u+x install.sh && ./install.sh && rm -rf install.sh

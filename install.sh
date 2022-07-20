@@ -146,9 +146,9 @@ zabbix_server_config() {
       if [ -z "$cache_configured" ];
       then
         if $IS_WSL; then
-          sed -i 's/^#\sCacheSize=8M$/# CacheSize=8M\n\nCacheSize=100M/g' /etc/zabbix/zabbix_server.conf
+          sed -i 's/^#\sCacheSize=[0-9][0-9]*M$/# CacheSize=32M\n\nCacheSize=100M/g' /etc/zabbix/zabbix_server.conf
         else
-          sed -i 's/^#\sCacheSize=8M$/# CacheSize=8M\n\nCacheSize=5G/g' /etc/zabbix/zabbix_server.conf
+          sed -i 's/^#\sCacheSize=[0-9][0-9]*M$/# CacheSize=32M\n\nCacheSize=5G/g' /etc/zabbix/zabbix_server.conf
         fi
       fi
     else
